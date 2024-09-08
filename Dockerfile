@@ -21,6 +21,8 @@ FROM nginx:stable-alpine
 COPY --from=build /app/build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
 
+ENV REACT_APP_CORE_SERVICE=http://10.211.55.10:8088/api/v1/my-blog
+
 # Expose port 80
 EXPOSE 80
 
