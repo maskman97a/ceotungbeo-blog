@@ -7,6 +7,7 @@ WORKDIR /app
 # Install dependencies
 COPY package.json package-lock.json ./
 RUN npm install
+RUN npm i bootstrap
 
 # Copy the rest of the application
 COPY . .
